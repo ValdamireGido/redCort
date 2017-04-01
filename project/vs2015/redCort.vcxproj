@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F8E9FF3D-64C9-7ED9-6DE1-09B0D93FE53A}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>redCort</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\product\debug\</OutDir>
+    <IntDir>obj\Debug\</IntDir>
+    <TargetName>redCort</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\product\release\</OutDir>
+    <IntDir>obj\Release\</IntDir>
+    <TargetName>redCort</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>EngineStdAfx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;G_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\source\redcort;..\..\source\redcort\video;..\..\..\glm;..\..\..\vulkan\1.0.17.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>EngineStdAfx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;G_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\source\redcort;..\..\source\redcort\video;..\..\..\glm;..\..\..\vulkan\1.0.17.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\redCort\EngineStdAfx.h" />
+    <ClInclude Include="..\..\source\redCort\RCAssert.h" />
+    <ClInclude Include="..\..\source\redCort\RedCort.h" />
+    <ClInclude Include="..\..\source\redCort\Version.h" />
+    <ClInclude Include="..\..\source\redCort\common\AsyncUpdateable.h" />
+    <ClInclude Include="..\..\source\redCort\common\FrameTimer.h" />
+    <ClInclude Include="..\..\source\redCort\common\Result.h" />
+    <ClInclude Include="..\..\source\redCort\common\Types.h" />
+    <ClInclude Include="..\..\source\redCort\common\Updateable.h" />
+    <ClInclude Include="..\..\source\redCort\video\FPSCounter.h" />
+    <ClInclude Include="..\..\source\redCort\video\VideoSettings.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\Device.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\Driver.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\GLES\GLESDriver.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanDevice.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanDriver.h" />
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanPhysicalDevice.h" />
+    <ClInclude Include="..\..\source\redCort_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\redCort\EngineStdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\RedCort.cpp" />
+    <ClCompile Include="..\..\source\redCort\Version.cpp" />
+    <ClCompile Include="..\..\source\redCort\common\AsyncUpdateable.cpp" />
+    <ClCompile Include="..\..\source\redCort\common\FrameTimer.cpp" />
+    <ClCompile Include="..\..\source\redCort\common\Updateable.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\FPSCounter.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\Device.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\Driver.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\GLES\GLESDriver.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanDevice.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanDriver.cpp" />
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanPhysicalDevice.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="redCort">
+      <UniqueIdentifier>{F8E9FF3D-64C9-7ED9-6DE1-09B0D93FE53A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redCort\common">
+      <UniqueIdentifier>{50249C84-3CF2-8F8A-2586-00B111F36BEF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redCort\video">
+      <UniqueIdentifier>{9E8F2A4B-0A50-A681-D38A-EFFE3F0AEB5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redCort\video\driver">
+      <UniqueIdentifier>{D998F481-C527-7E4B-6E46-92465AB48EF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redCort\video\driver\GLES">
+      <UniqueIdentifier>{93C33D68-FF85-71F2-4836-007FB4374AD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="redCort\video\driver\Vulkan">
+      <UniqueIdentifier>{3918B694-A525-E47A-2E0C-E0659A18B031}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\redCort\EngineStdAfx.h">
+      <Filter>redCort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\RCAssert.h">
+      <Filter>redCort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\RedCort.h">
+      <Filter>redCort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\Version.h">
+      <Filter>redCort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\common\AsyncUpdateable.h">
+      <Filter>redCort\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\common\FrameTimer.h">
+      <Filter>redCort\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\common\Result.h">
+      <Filter>redCort\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\common\Types.h">
+      <Filter>redCort\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\common\Updateable.h">
+      <Filter>redCort\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\FPSCounter.h">
+      <Filter>redCort\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\VideoSettings.h">
+      <Filter>redCort\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\Device.h">
+      <Filter>redCort\video\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\Driver.h">
+      <Filter>redCort\video\driver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\GLES\GLESDriver.h">
+      <Filter>redCort\video\driver\GLES</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanDevice.h">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanDriver.h">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\video\driver\Vulkan\VulkanPhysicalDevice.h">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort_config.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\redCort\EngineStdAfx.cpp">
+      <Filter>redCort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\RedCort.cpp">
+      <Filter>redCort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\Version.cpp">
+      <Filter>redCort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\common\AsyncUpdateable.cpp">
+      <Filter>redCort\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\common\FrameTimer.cpp">
+      <Filter>redCort\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\common\Updateable.cpp">
+      <Filter>redCort\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\FPSCounter.cpp">
+      <Filter>redCort\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\Device.cpp">
+      <Filter>redCort\video\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\Driver.cpp">
+      <Filter>redCort\video\driver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\GLES\GLESDriver.cpp">
+      <Filter>redCort\video\driver\GLES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanDevice.cpp">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanDriver.cpp">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\video\driver\Vulkan\VulkanPhysicalDevice.cpp">
+      <Filter>redCort\video\driver\Vulkan</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
