@@ -18,7 +18,7 @@ protected:
 	virtual void Update(std::chrono::nanoseconds frameTime) override
 	{
 		std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-		printf("\nframeTime = %ull", frameTime);
+//		printf("\nframeTime = %ull", frameTime);
 	}
 
 	virtual bool ShouldWork() const override

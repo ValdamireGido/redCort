@@ -50,10 +50,10 @@ project "Test"
 		targetdir("Test/debug")
 		defines { "G_DEBUG" }
 		debugdir "Test/debug"
-		flags { "Symbols" }
+		symbols 'On'
 		
 	configuration "Release"
 		targetdir("Test/release")
 		debugdir "Test/release"
-		flags { "Optimize" }
+		symbols 'Off'
 		

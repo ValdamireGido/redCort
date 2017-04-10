@@ -1,5 +1,6 @@
 #include "EngineStdAfx.h"
 #include "VulkanDriver.h"
+#include "VulkanExtensions.h"
 #include "VulkanPhysicalDevice.h"
 #include "VulkanDevice.h"
 
@@ -14,6 +15,8 @@ namespace redcort
 				RASSERT2(!m_isInitialized, "Vulkan Driver is already initialzied.");
 				return;
 			}
+
+			InitExtensions();
 
 			VkApplicationInfo vkApplicationInfo;
 			vkApplicationInfo.sType				 = VK_STRUCTURE_TYPE_APPLICATION_INFO;
@@ -30,8 +33,8 @@ namespace redcort
 			vkInstanceCreateInfo.flags						= 0u;
 			vkInstanceCreateInfo.pApplicationInfo			= &vkApplicationInfo;
 			vkInstanceCreateInfo.enabledLayerCount			= 1u;
-			vkInstanceCreateInfo.ppEnabledExtensionNames	= nullptr;		// TODO: Need to move to specific controller
-			vkInstanceCreateInfo.enabledExtensionCount		= 0u;			// 
+			vkInstanceCreateInfo.ppEnabledExtensionNames	= m_extensions->raw();
+			vkInstanceCreateInfo.enabledExtensionCount		= m_extensions->count();
 			vkInstanceCreateInfo.ppEnabledLayerNames		= nullptr;		// TODO: Need to move to specific controller
 			vkInstanceCreateInfo.enabledLayerCount			= 0u;			//
 
@@ -81,6 +84,7 @@ namespace redcort
 			m_isInitialized = true;
 		}
 
+
 		void VulkanDriver::Deinit()
 		{
 			if (!m_isInitialized)
@@ -100,6 +104,16 @@ namespace redcort
 				delete m_pPhysicalDevice;
 				m_pPhysicalDevice = nullptr;
 			}
+		}
+
+
+		void VulkanDriver::InitExtensions()
+		{
+			ASSERT_PTR_NULL_VOID_RETURN(m_extensions);
+			m_extensions = new VulkanExtensions();
+			ASSERT_PTR_VOID_RETURN(m_extensions);
+
+			
 		}
 	}
 }

@@ -8,6 +8,7 @@ namespace redcort
 {
 	namespace video
 	{
+		class VulkanExtensions;
 		class VulkanPhysicalDevice;
 		class VulkanDevice;
 
@@ -25,7 +26,11 @@ namespace redcort
 			VkInstance& GetVkInstance();
 
 		private:
+			void InitExtensions();
+
+		private:
 			VkInstance				m_pVkInstance;
+			VulkanExtensions*		m_extensions;
 			VulkanPhysicalDevice*	m_pPhysicalDevice;
 			VulkanDevice*			m_pDevice;
 

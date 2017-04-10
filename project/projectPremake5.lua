@@ -26,10 +26,10 @@ project "redCort"
 	configuration "Debug"
 		targetdir("../product/debug")
 		defines { "G_DEBUG" }
-		flags { "Symbols" }
+		symbols 'On'
 		
 	configuration "Release"
 		targetdir("../product/release")
 		defines { "G_RELEASE" }
-		flags { "Optimize" }
+		symbols 'Off'
 		
