@@ -4,6 +4,9 @@
     <Filter Include="redCort">
       <UniqueIdentifier>{F8E9FF3D-64C9-7ED9-6DE1-09B0D93FE53A}</UniqueIdentifier>
     </Filter>
+    <Filter Include="redCort\Settings">
+      <UniqueIdentifier>{18562267-044F-41B9-2D81-263E19D920C5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="redCort\common">
       <UniqueIdentifier>{50249C84-3CF2-8F8A-2586-00B111F36BEF}</UniqueIdentifier>
     </Filter>
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="..\..\source\redCort\RedCort.h">
       <Filter>redCort</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\redCort\Settings\Settings.h">
+      <Filter>redCort\Settings</Filter>
     </ClInclude>
     <ClInclude Include="..\..\source\redCort\Version.h">
       <Filter>redCort</Filter>
@@ -83,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="..\..\source\redCort\RedCort.cpp">
       <Filter>redCort</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\redCort\Settings\Settings.cpp">
+      <Filter>redCort\Settings</Filter>
     </ClCompile>
     <ClCompile Include="..\..\source\redCort\Version.cpp">
       <Filter>redCort</Filter>

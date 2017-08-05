@@ -91,6 +91,7 @@
     <ClInclude Include="..\..\source\redCort\EngineStdAfx.h" />
     <ClInclude Include="..\..\source\redCort\RCAssert.h" />
     <ClInclude Include="..\..\source\redCort\RedCort.h" />
+    <ClInclude Include="..\..\source\redCort\Settings\Settings.h" />
     <ClInclude Include="..\..\source\redCort\Version.h" />
     <ClInclude Include="..\..\source\redCort\common\AsyncUpdateable.h" />
     <ClInclude Include="..\..\source\redCort\common\FrameTimer.h" />
@@ -114,6 +115,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\source\redCort\RedCort.cpp" />
+    <ClCompile Include="..\..\source\redCort\Settings\Settings.cpp" />
     <ClCompile Include="..\..\source\redCort\Version.cpp" />
     <ClCompile Include="..\..\source\redCort\common\AsyncUpdateable.cpp" />
     <ClCompile Include="..\..\source\redCort\common\FrameTimer.cpp" />

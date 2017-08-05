@@ -77,6 +77,8 @@ do { 												\
 /////////////////////////////////////////////////////
 
 
+#include "../redCort_config.h"
+
 #include "RCAssert.h"
 #include "Version.h"
 
@@ -92,6 +94,13 @@ do { 												\
 #include <string>
 #include <algorithm>
 #include <functional>
+
+
+#if defined(G_DEBUG) && (ENABLE_DEBUG_STATEMENTS == 1)
+	#define DEBUG_(statement) statement
+#else 
+	#define DEBUG_(statement)
+#endif
 
 
 #endif // !defined(__Engine_Std_Afx_h_include__)
